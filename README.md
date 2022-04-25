@@ -1,12 +1,12 @@
-# Trov FAQs
+# Trov White Pages
 
 > This is a work in progress
 
-A pre-configured resources for FAQs to install into Trov CMS.
+A pre-configured White Page Resource for integration into Trov CMS.
 
 ## Installation
 
 ```bash
-composer require awcodes/trov-faqs
-php artisan trov-faqs:install
+composer require awcodes/trov-whitepages
+php artisan trov-whitepages:install
 ```
