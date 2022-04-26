@@ -2,10 +2,8 @@
 
 namespace App\Models;
 
-use Trov\Models\Author;
 use Trov\Traits\HasMeta;
 use Trov\Traits\HasAuthor;
-use Trov\Linkables\Traits\HasLinkSet;
 use Trov\Traits\IsSluggable;
 use Trov\Traits\HasPublishedScope;
 use Illuminate\Database\Eloquent\Model;
@@ -20,7 +18,6 @@ class WhitePage extends Model
     use HasMeta;
     use HasAuthor;
     use SoftDeletes;
-    use HasLinkSet;
 
     /**
      * The attributes that are mass assignable.
