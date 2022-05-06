@@ -84,6 +84,9 @@ class WhitePageResource extends Resource
         return $table
             ->columns([
                 TitleWithStatus::make('title')
+                    ->statuses(Status::class)
+                    ->hiddenOn(Status::Published->name)
+                    ->colors(Status::colors())
                     ->searchable()
                     ->sortable(),
                 IconColumn::make('meta.indexable')
