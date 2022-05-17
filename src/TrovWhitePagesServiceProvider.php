@@ -19,4 +19,11 @@ class TrovWhitePagesServiceProvider extends PluginServiceProvider
                 'create_white_pages_table',
             ]);
     }
+
+    public function boot()
+    {
+        parent::boot();
+
+        Livewire::component('whitepages-overview', Widgets\WhitePagesOverview::class);
+    }
 }
