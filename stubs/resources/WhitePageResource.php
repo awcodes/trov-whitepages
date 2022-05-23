@@ -9,7 +9,6 @@ use Trov\Forms\Components\Meta;
 use Trov\Traits\HasSoftDeletes;
 use Filament\Resources\Resource;
 use TrovComponents\Enums\Status;
-use TrovComponents\Filament\Panel;
 use TrovComponents\Forms\Timestamps;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Section;
@@ -53,7 +52,7 @@ class WhitePageResource extends Resource
                 TitleWithSlug::make('title', 'slug', fn (?Model $record) => "/{$record->type}/" ?? '/')->columnSpan('full'),
                 PageBuilder::make('content')
             ], [
-                Panel::make('Details')
+                Section::make('Details')
                     ->collapsible()
                     ->schema([
                         Select::make('status')
